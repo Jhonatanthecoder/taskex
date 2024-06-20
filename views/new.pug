@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  //h1= title
+  //p Welcome to #{title}
+
+  div.content 
+    div.change
+      h2 
+        a(href="/") Messages 
+      h2 
+        a(href="/new") Add message   
+    div.formulary
+      h1 Add a new Message
+      form(action="/new" method="POST")
+        label(for="texto") Mensaje:
+        textarea(type="text" id="texto" name="texto" required)
+        br
+        label(for="authors") Autor:
+        input(type="text" id="authors" name="authors" required)
+        br
+        button(type="submit") Enviar 
+      

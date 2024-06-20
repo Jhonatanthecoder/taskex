@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  //h1= title
+  //p Welcome to #{title}
+
+  div.content 
+    div.change
+      h2 
+        a(href="/")  Messages 
+      h2 
+        a(href="/new") Add message  
+    div.main
+      each item, index in bringData
+        div.note 
+          p #{item.text}
+          h3 #{item.author}
+      
